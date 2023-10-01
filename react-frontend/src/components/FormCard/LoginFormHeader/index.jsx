@@ -8,7 +8,7 @@ const LoginFormHeader = (props) => {
         <div className="first">
           <div className="title">
             Welcome to&nbsp;
-            <p> THE ELEVENTH</p>
+            <p> OWL CAMERA FOCUS</p>
           </div>
           <div className="link">
             <div className="link-container">

@@ -87,9 +87,6 @@ const Register = () => {
   console.log(values);
   return (
     <div className="container">
-      <div className="first-container">
-        <LoginGreeting type="register" text="Hi there!" />
-      </div>
       <div className="second-container">
         <FormCard
           type="register"
@@ -98,6 +95,9 @@ const Register = () => {
           onChange={onChange}
           handleSubmit={handleSubmit}
         />
+      </div>
+      <div className="first-container">
+        <LoginGreeting type="register" text="Hi there!" />
       </div>
     </div>
   );

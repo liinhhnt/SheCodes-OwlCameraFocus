@@ -8,18 +8,23 @@ $HEADER_BACKGROUND: linear-gradient(292.12deg, #ffc881 -35.02%, #c9e7f2 78.96%);
   z-index: 2;
   padding-left: 40px;
   width: 97.4%;
-  font-family: util.$FONT_FAMILY_M;
+  font-family: Inika;//util.$FONT_FAMILY_M;
   gap: 10%;
   .logo {
     display: flex;
     align-items: center;
-    width: 360px;
+    // width: 360px;
     cursor: pointer;
 
+    img {
+      width: 50px; 
+      height: auto; 
+    }
     p {
-      font-family: util.$FONT_FAMILY_MA;
+      padding-left: 10px;
+      font-family: Inika;//util.$FONT_FAMILY_MA;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 300;
       line-height: 29px;
     }
     svg {

@@ -8,7 +8,7 @@ const LoginLayout = () => {
   return (
     <>
       <ToastContainer />
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="login-form">
         <div className="login-container">
           <div className="login-layout">

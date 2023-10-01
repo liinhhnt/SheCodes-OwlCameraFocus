@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,14 +17,16 @@ const Login = () => {
   const dispatch = useDispatch();
   const [login] = useSigninMutation();
   const userId = useSelector(selectCurrentUserId);
+  const [rememberMe, setRememberMe] = useState(false);
+
   let inputs = [
     {
       id: 1,
       name: "username",
       type: "text",
-      placeholder: "Username or email address",
+      placeholder: "Email address",
       errorMessage: "",
-      label: "Enter your username or email address",
+      label: "Enter your email address",
     },
 
     {
@@ -36,6 +38,13 @@ const Login = () => {
       label: "Enter your Password",
     },
   ];
+  const rememberMeInput = {
+    id: 3,
+    name: "rememberMe",
+    type: "checkbox",
+    label: "Remember Me",
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = values.username;
@@ -48,7 +57,7 @@ const Login = () => {
       });
       toast.success("Sign in successfully");
       const cart = await getActiveCartByUserId(userData.id);
-      console.log('Current cart Id:', )
+      console.log('Current cart Id:',)
       if (!cart) {
         const payload = {
           userId: userData.id,
@@ -81,9 +90,6 @@ const Login = () => {
     <>
       {" "}
       <div className="container">
-        <div className="first-container">
-          <LoginGreeting type="login" text="Welcome back!" />
-        </div>
         <div className="second-container">
           <FormCard
             type="login"
@@ -92,6 +98,9 @@ const Login = () => {
             onChange={onChange}
             handleSubmit={handleSubmit}
           />
+        </div>
+        <div className="first-container">
+          <LoginGreeting type="login" text="Welcome back!" />
         </div>
       </div>
     </>

@@ -2,10 +2,10 @@
 $LOGIN_BACKGROUND: linear-gradient(292.12deg, #ffc881 -35.02%, #c9e7f2 78.96%);
 
 .login-form {
-  background: $LOGIN_BACKGROUND;
-  position: relative;
+  background: #FFB9E7A8;
+  position: absolute;
   z-index: 1;
-  padding: 100px 0 0 0;
+  padding: 0px 0 0 0;
   a {
     text-decoration: none;
     cursor: pointer;
@@ -18,15 +18,15 @@ $LOGIN_BACKGROUND: linear-gradient(292.12deg, #ffc881 -35.02%, #c9e7f2 78.96%);
     .login-layout {
       border-top: 2px solid white;
       padding: 40px 0px 0 0px;
-      .first-container {
-        flex: 1;
-        height: 100%;
-      }
       .second-container {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        height: 100%;
+      }
+      .first-container {
+        flex: 1;
         height: 100%;
       }
     }

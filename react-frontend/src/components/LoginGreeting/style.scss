@@ -2,27 +2,26 @@
 .login-greeting {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center; 
   gap: 42px;
-  padding-top: 50px;
-  padding-right: 25%;
-  .first {
-    color: #000;
-    font-family: util.$FONT_FAMILY_M;
-    font-size: 50px;
-    font-weight: 700;
+  padding-top: 175px;
+  padding-left: 45px;
+
+  .image-container {
     display: flex;
+    justify-content: center;
+    img {
+      width: 170px; 
+      height: 190px; 
+    }
+  }
+
+  .text-container {
+    color: #000;
+    font-family: Inika;
+    font-size: 32px; 
+    font-weight: 420;
     align-items: center;
-  }
-  .second {
-    color: #000;
-    font-family: util.$FONT_FAMILY_M;
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .third {
-    color: #000;
-    font-family: util.$FONT_FAMILY_M;
-    font-size: 16px;
-    font-weight: 300;
   }
 }
